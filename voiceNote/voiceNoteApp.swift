@@ -6,15 +6,26 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    return true
+  }
+}
 
 @main
-struct voiceNoteApp: App {
-    var body: some Scene {
-        WindowGroup {
-            NavigationStack {
-                LoginView()  
-            }
-        }
+struct voiceNoteApp: App {   // ✅ 네 기존 앱 이름 유지
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
+  var body: some Scene {
+    WindowGroup {
+      NavigationStack {
+        LoginView()
+      }
     }
+  }
 }
+
