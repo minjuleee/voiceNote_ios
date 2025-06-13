@@ -11,6 +11,26 @@
 		FC53CEF52DFC08BE00D0BFD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CEF42DFC08BE00D0BFD3 /* ContentView.swift */; };
 		FC53CEF72DFC08C100D0BFD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC53CEF62DFC08C100D0BFD3 /* Assets.xcassets */; };
 		FC53CEFA2DFC08C100D0BFD3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC53CEF92DFC08C100D0BFD3 /* Preview Assets.xcassets */; };
+		FC53CF122DFC0C2F00D0BFD3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF112DFC0C2F00D0BFD3 /* DetailView.swift */; };
+		FC53CF142DFC0C4300D0BFD3 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF132DFC0C4300D0BFD3 /* RecordView.swift */; };
+		FC53CF162DFC0C4E00D0BFD3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF152DFC0C4E00D0BFD3 /* HomeView.swift */; };
+		FC53CF182DFC0C5900D0BFD3 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF172DFC0C5900D0BFD3 /* SignupView.swift */; };
+		FC53CF1A2DFC0C6200D0BFD3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF192DFC0C6200D0BFD3 /* LoginView.swift */; };
+		FC53CF1D2DFC0C9F00D0BFD3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF1C2DFC0C9F00D0BFD3 /* DetailViewModel.swift */; };
+		FC53CF1F2DFC0CAB00D0BFD3 /* RecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF1E2DFC0CAB00D0BFD3 /* RecordViewModel.swift */; };
+		FC53CF212DFC0CC300D0BFD3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF202DFC0CC300D0BFD3 /* LoginViewModel.swift */; };
+		FC53CF232DFC0CE000D0BFD3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF222DFC0CE000D0BFD3 /* HomeViewModel.swift */; };
+		FC53CF252DFC0D3700D0BFD3 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF242DFC0D3700D0BFD3 /* SignupViewModel.swift */; };
+		FC53CF282DFC0D5E00D0BFD3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF272DFC0D5E00D0BFD3 /* AuthService.swift */; };
+		FC53CF2A2DFC0D6D00D0BFD3 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF292DFC0D6D00D0BFD3 /* FirestoreService.swift */; };
+		FC53CF2C2DFC0D7E00D0BFD3 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF2B2DFC0D7E00D0BFD3 /* StorageService.swift */; };
+		FC53CF2E2DFC0D8F00D0BFD3 /* HuggingFaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF2D2DFC0D8F00D0BFD3 /* HuggingFaceService.swift */; };
+		FC53CF302DFC0DC800D0BFD3 /* STTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF2F2DFC0DC800D0BFD3 /* STTService.swift */; };
+		FC53CF332DFC0DE500D0BFD3 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF322DFC0DE500D0BFD3 /* Memo.swift */; };
+		FC53CF352DFC0DEE00D0BFD3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF342DFC0DEE00D0BFD3 /* User.swift */; };
+		FC53CF392DFC0E8E00D0BFD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF382DFC0E8E00D0BFD3 /* AppDelegate.swift */; };
+		FC53CF3B2DFC0E9A00D0BFD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF3A2DFC0E9A00D0BFD3 /* SceneDelegate.swift */; };
+		FC53CF3D2DFC0EA900D0BFD3 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53CF3C2DFC0EA900D0BFD3 /* FirebaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +39,26 @@
 		FC53CEF42DFC08BE00D0BFD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC53CEF62DFC08C100D0BFD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC53CEF92DFC08C100D0BFD3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC53CF112DFC0C2F00D0BFD3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FC53CF132DFC0C4300D0BFD3 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		FC53CF152DFC0C4E00D0BFD3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FC53CF172DFC0C5900D0BFD3 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		FC53CF192DFC0C6200D0BFD3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FC53CF1C2DFC0C9F00D0BFD3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		FC53CF1E2DFC0CAB00D0BFD3 /* RecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewModel.swift; sourceTree = "<group>"; };
+		FC53CF202DFC0CC300D0BFD3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FC53CF222DFC0CE000D0BFD3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FC53CF242DFC0D3700D0BFD3 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		FC53CF272DFC0D5E00D0BFD3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FC53CF292DFC0D6D00D0BFD3 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		FC53CF2B2DFC0D7E00D0BFD3 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		FC53CF2D2DFC0D8F00D0BFD3 /* HuggingFaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuggingFaceService.swift; sourceTree = "<group>"; };
+		FC53CF2F2DFC0DC800D0BFD3 /* STTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTService.swift; sourceTree = "<group>"; };
+		FC53CF322DFC0DE500D0BFD3 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		FC53CF342DFC0DEE00D0BFD3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC53CF382DFC0E8E00D0BFD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC53CF3A2DFC0E9A00D0BFD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC53CF3C2DFC0EA900D0BFD3 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +91,17 @@
 		FC53CEF12DFC08BE00D0BFD3 /* voiceNote */ = {
 			isa = PBXGroup;
 			children = (
+				FC53CF372DFC0E7D00D0BFD3 /* App */,
+				FC53CF362DFC0DF500D0BFD3 /* Resources */,
+				FC53CF312DFC0DD100D0BFD3 /* Models */,
+				FC53CF262DFC0D4B00D0BFD3 /* Services */,
+				FC53CF1B2DFC0C8C00D0BFD3 /* ViewModels */,
+				FC53CF0C2DFC0BF800D0BFD3 /* Views */,
+				FC53CF0B2DFC0BF100D0BFD3 /* Utils */,
+				FC53CF0A2DFC0BE700D0BFD3 /* Components */,
+				FC53CF092DFC0BD900D0BFD3 /* Supporting */,
 				FC53CEF22DFC08BE00D0BFD3 /* voiceNoteApp.swift */,
 				FC53CEF42DFC08BE00D0BFD3 /* ContentView.swift */,
-				FC53CEF62DFC08C100D0BFD3 /* Assets.xcassets */,
 				FC53CEF82DFC08C100D0BFD3 /* Preview Content */,
 			);
 			path = voiceNote;
@@ -65,6 +113,122 @@
 				FC53CEF92DFC08C100D0BFD3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC53CF092DFC0BD900D0BFD3 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		FC53CF0A2DFC0BE700D0BFD3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FC53CF0B2DFC0BF100D0BFD3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC53CF0C2DFC0BF800D0BFD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF102DFC0C1A00D0BFD3 /* Auth */,
+				FC53CF0F2DFC0C1500D0BFD3 /* Home */,
+				FC53CF0E2DFC0C0E00D0BFD3 /* Record */,
+				FC53CF0D2DFC0C0600D0BFD3 /* Detail */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC53CF0D2DFC0C0600D0BFD3 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF112DFC0C2F00D0BFD3 /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FC53CF0E2DFC0C0E00D0BFD3 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF132DFC0C4300D0BFD3 /* RecordView.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		FC53CF0F2DFC0C1500D0BFD3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF152DFC0C4E00D0BFD3 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FC53CF102DFC0C1A00D0BFD3 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF192DFC0C6200D0BFD3 /* LoginView.swift */,
+				FC53CF172DFC0C5900D0BFD3 /* SignupView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FC53CF1B2DFC0C8C00D0BFD3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF202DFC0CC300D0BFD3 /* LoginViewModel.swift */,
+				FC53CF242DFC0D3700D0BFD3 /* SignupViewModel.swift */,
+				FC53CF222DFC0CE000D0BFD3 /* HomeViewModel.swift */,
+				FC53CF1E2DFC0CAB00D0BFD3 /* RecordViewModel.swift */,
+				FC53CF1C2DFC0C9F00D0BFD3 /* DetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FC53CF262DFC0D4B00D0BFD3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF272DFC0D5E00D0BFD3 /* AuthService.swift */,
+				FC53CF292DFC0D6D00D0BFD3 /* FirestoreService.swift */,
+				FC53CF2B2DFC0D7E00D0BFD3 /* StorageService.swift */,
+				FC53CF2D2DFC0D8F00D0BFD3 /* HuggingFaceService.swift */,
+				FC53CF2F2DFC0DC800D0BFD3 /* STTService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FC53CF312DFC0DD100D0BFD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF322DFC0DE500D0BFD3 /* Memo.swift */,
+				FC53CF342DFC0DEE00D0BFD3 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FC53CF362DFC0DF500D0BFD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CEF62DFC08C100D0BFD3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC53CF372DFC0E7D00D0BFD3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FC53CF382DFC0E8E00D0BFD3 /* AppDelegate.swift */,
+				FC53CF3A2DFC0E9A00D0BFD3 /* SceneDelegate.swift */,
+				FC53CF3C2DFC0EA900D0BFD3 /* FirebaseManager.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +301,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC53CF182DFC0C5900D0BFD3 /* SignupView.swift in Sources */,
+				FC53CF232DFC0CE000D0BFD3 /* HomeViewModel.swift in Sources */,
+				FC53CF1A2DFC0C6200D0BFD3 /* LoginView.swift in Sources */,
+				FC53CF1F2DFC0CAB00D0BFD3 /* RecordViewModel.swift in Sources */,
+				FC53CF3D2DFC0EA900D0BFD3 /* FirebaseManager.swift in Sources */,
 				FC53CEF52DFC08BE00D0BFD3 /* ContentView.swift in Sources */,
+				FC53CF142DFC0C4300D0BFD3 /* RecordView.swift in Sources */,
+				FC53CF282DFC0D5E00D0BFD3 /* AuthService.swift in Sources */,
+				FC53CF302DFC0DC800D0BFD3 /* STTService.swift in Sources */,
+				FC53CF3B2DFC0E9A00D0BFD3 /* SceneDelegate.swift in Sources */,
+				FC53CF392DFC0E8E00D0BFD3 /* AppDelegate.swift in Sources */,
+				FC53CF2A2DFC0D6D00D0BFD3 /* FirestoreService.swift in Sources */,
+				FC53CF252DFC0D3700D0BFD3 /* SignupViewModel.swift in Sources */,
+				FC53CF122DFC0C2F00D0BFD3 /* DetailView.swift in Sources */,
+				FC53CF2C2DFC0D7E00D0BFD3 /* StorageService.swift in Sources */,
+				FC53CF162DFC0C4E00D0BFD3 /* HomeView.swift in Sources */,
+				FC53CF2E2DFC0D8F00D0BFD3 /* HuggingFaceService.swift in Sources */,
 				FC53CEF32DFC08BE00D0BFD3 /* voiceNoteApp.swift in Sources */,
+				FC53CF332DFC0DE500D0BFD3 /* Memo.swift in Sources */,
+				FC53CF212DFC0CC300D0BFD3 /* LoginViewModel.swift in Sources */,
+				FC53CF1D2DFC0C9F00D0BFD3 /* DetailViewModel.swift in Sources */,
+				FC53CF352DFC0DEE00D0BFD3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
