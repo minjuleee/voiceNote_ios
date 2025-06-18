@@ -8,68 +8,50 @@
 import SwiftUI
 
 struct RecordView: View {
-    @Environment(\.dismiss) var dismiss  // 뒤로가기 위해 사용
-
-    @State private var isRecording: Bool = false
-    @State private var recognizedText: String = "실시간 음성 텍스트화"
-    @State private var selectedTab: Tab = .record  // 탭바 상태 관리
-
+    
+    @StateObject private var viewModel = RecordViewModel()
+    
     var body: some View {
-        VStack {
-            // 상단 바
-            HStack {
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "arrow.left")
-                        .font(.title2)
-                        .foregroundColor(.black)
-                }
-
-                Spacer()
-
-                Text(isRecording ? "녹음 중..." : "녹음 대기 중")
-                    .font(.headline)
-                    .foregroundColor(.blue)
-
-                Spacer()
-
-                Spacer().frame(width: 30)
+        VStack(spacing: 30) {
+            
+            // 제목
+            Text(viewModel.isRecording ? "녹음 중..." : "스마트 음성 메모장")
+                .font(.title)
+                .fontWeight(.bold)
+            
+            // 웨이브폼 (볼륨 레벨 시각화)
+            WaveformView(level: viewModel.volumeLevel)
+                .frame(height: 100)
+                .padding()
+            
+            // 실시간 텍스트 표시
+            ScrollView {
+                Text(viewModel.liveText)
+                    .font(.body)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
-
-            Spacer()
-
-            // STT 결과 표시 박스
-            VStack {
-                Spacer()
-                
-                Image(systemName: "waveform")
-                    .font(.system(size: 40))
-                    .foregroundColor(.white)
-                    .padding(.bottom, 10)
-
-                Text(recognizedText)
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .padding(.bottom, 40)
-
-                Spacer()
+            .frame(height: 200)
+            .background(Color(.systemGray6))
+            .cornerRadius(12)
+            .padding(.horizontal)
+            
+            // 녹음 버튼
+            Button(action: {
+                viewModel.toggleRecording()
+            }) {
+                Image(systemName: viewModel.isRecording ? "stop.circle.fill" : "mic.circle.fill")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(viewModel.isRecording ? .red : .blue)
             }
-            .frame(maxWidth: .infinity, maxHeight: 400)
-            .background(isRecording ? Color.red : Color.blue)
-            .cornerRadius(30)
-            .padding(.horizontal, 20)
-
+            
             Spacer()
-
-            // 탭바 삽입
-            TabBar(selectedTab: $selectedTab, isRecording: $isRecording)
         }
-        .navigationBarBackButtonHidden(true)
+        .padding()
     }
 }
+
 
 #Preview {
     RecordView()

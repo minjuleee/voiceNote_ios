@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Info.plist
+   voiceNote
+
+   Created by 이민주 on 6/15/25.
+   Copyright (c) 2025 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.minju.voicenote</string>
+
+    <key>CFBundleName</key>
+    <string>VoiceNote</string>
+
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+
+    <key>NSMicrophoneUsageDescription</key>
+    <string>이 앱은 음성 녹음을 위해 마이크 접근 권한이 필요합니다.</string>
+
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>이 앱은 음성을 텍스트로 변환하기 위해 음성 인식 권한이 필요합니다.</string>
+</dict>
+</plist>
