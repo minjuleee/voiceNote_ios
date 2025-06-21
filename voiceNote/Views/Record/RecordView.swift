@@ -35,10 +35,10 @@ struct RecordView: View {
                 
                 // 🔹 웨이브폼 + 실시간 텍스트
                 ZStack {
-                    WaveformView(volumes: viewModel.volumeHistory)
-                        .padding()
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .foregroundColor(.white)
+//                    WaveformView(volumes: viewModel.volumeHistory)
+//                        .padding()
+//                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        .foregroundColor(.white)
 
                     ScrollView {
                         Text(viewModel.liveText)

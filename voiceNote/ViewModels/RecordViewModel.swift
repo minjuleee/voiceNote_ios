@@ -13,7 +13,7 @@ class RecordViewModel: ObservableObject {
 
     private let sttService = STTService()
     private let audioRecorder = AudioRecorder()
-    private let openAIService = OpenAIService() // ✅ OpenAI로 교체
+    private let openAIService = OpenAIService()
     private let firestoreService = FirestoreService()
 
     func toggleRecording() {

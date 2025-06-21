@@ -14,18 +14,22 @@ struct WaveformView: View {
         GeometryReader { geo in
             let height = geo.size.height
             let width = geo.size.width
-            let step = width / CGFloat(max(volumes.count, 1)) // 0 나누기 방지
+            let step = width / CGFloat(max(volumes.count, 1)) * 1.5
 
             Path { path in
-                for (i, vol) in volumes.enumerated() {
+                for (i, vol) in volumes.enumerated() where i % 2 == 0 {
                     let x = CGFloat(i) * step
-                    let y = height / 2 - CGFloat(vol) * height / 2
-                    path.move(to: CGPoint(x: x, y: height / 2))
-                    path.addLine(to: CGPoint(x: x, y: y))
+                    let normalized = max(0, min(1, (vol + 60) / 60))
+                    let barHeight = CGFloat(normalized) * height
+
+                    path.move(to: CGPoint(x: x, y: height / 2 + barHeight / 2))
+                    path.addLine(to: CGPoint(x: x, y: height / 2 - barHeight / 2))
                 }
             }
-            .stroke(Color.blue, lineWidth: 2)
+            .stroke(Color.white, lineWidth: 1)
         }
     }
 }
+
+
 
