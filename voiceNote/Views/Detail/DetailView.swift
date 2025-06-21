@@ -1,97 +1,95 @@
-//
-//  DetailView.swift
-//  voiceNote
-//
-//  Created by 이민주 on 6/13/25.
-//
-
 import SwiftUI
 
 struct DetailView: View {
     
-    @Environment(\.dismiss) var dismiss  // 뒤로가기
-    @State private var selectedTab: Tab = .detail  // 탭 상태 관리
+    let memo: Memo
+    @Environment(\.dismiss) private var dismiss
     
-    // 샘플 데이터
-    let memoTitle: String = "녹음메모 제목"
-    let date: String = "2025.05.17 토 06:52"
-    let rawText: String = "실시간 음성 텍스트화"
-    let summaryText: String = "요약한 메모"
-    
+    @State private var selectedTab: Tab = .detail
+    @State private var isRecording: Bool = false
+    @State private var isHomeActive: Bool = false
+    @State private var isRecordActive: Bool = false
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            
-            // 상단 바
-            HStack {
-                Button(action: {
-                    dismiss()
-                }) {
-                    Image(systemName: "arrow.left")
-                        .font(.title2)
-                        .foregroundColor(.black)
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 20) {
+                
+                // 상단 바
+                ZStack {
+                    HStack {
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: "arrow.left")
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                        }
+                        Spacer()
+                    }
+
+                    Text(memo.title)
+                        .font(.headline)
+                        .foregroundColor(.blue)
                 }
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+                
+                // 날짜
+                Text(memo.date)
+                    .font(.subheadline)
+                    .padding(.horizontal, 20)
+                
+                // 음성 텍스트
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("📝 음성 텍스트")
+                        .font(.headline)
+                    Text(memo.rawText)
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color(.systemGray5))
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal, 20)
+                
+                // 요약 텍스트
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("📌 요약 내용")
+                        .font(.headline)
+                    Text(memo.summary)
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color(.systemGray5))
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal, 20)
                 
                 Spacer()
                 
-                Text(memoTitle)
-                    .font(.headline)
-                    .foregroundColor(.blue)
-                
-                Spacer().frame(width: 30)
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
-            
-            // 날짜
-            Text(date)
-                .font(.subheadline)
-                .padding(.horizontal, 20)
-            
-            // 오디오 플레이어 (지금은 더미)
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color.gray.opacity(0.2))
-                .frame(height: 60)
-                .overlay(
-                    HStack {
-                        Image(systemName: "play.fill")
-                            .font(.title)
-                        Spacer()
-                        Text("1:21")
-                            .font(.subheadline)
-                    }
-                    .padding(.horizontal, 20)
+                // 탭바
+                TabBar(
+                    selectedTab: $selectedTab,
+                    isRecording: $isRecording,
+                    onToggleRecording: {}
                 )
-                .padding(.horizontal, 20)
-            
-            // 실시간 원본 텍스트
-            VStack(alignment: .leading) {
-                Text(rawText)
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color(.systemGray5))
-                    .cornerRadius(10)
             }
-            .padding(.horizontal, 20)
-            
-            // 요약 텍스트
-            VStack(alignment: .leading) {
-                Text(summaryText)
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color(.systemGray5))
-                    .cornerRadius(10)
+            // 🔹 홈 이동
+            .navigationDestination(isPresented: $isHomeActive) {
+                HomeView()
             }
-            .padding(.horizontal, 20)
-            
-            Spacer()
-            
-            // 하단 탭바 삽입
-            TabBar(selectedTab: $selectedTab, isRecording: .constant(false))
+            .navigationDestination(isPresented: $isRecordActive) {
+                RecordView()
+            }
+            .onChange(of: selectedTab) { tab in
+                switch tab {
+                case .home:
+                    isHomeActive = true
+                case .record:
+                    isRecordActive = true
+                case .detail:
+                    break
+                }
+            }
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarBackButtonHidden(true)
     }
-}
-
-#Preview {
-    DetailView()
 }

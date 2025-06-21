@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct WaveformView: View {
-    
-    var level: Float  // 0.0 ~ 1.0
-    
+    var volumes: [Float]
+
     var body: some View {
-        ZStack {
-            Capsule()
-                .fill(Color.gray.opacity(0.3))
-                .frame(height: 10)
-            
-            Capsule()
-                .fill(Color.blue)
-                .frame(width: CGFloat(level) * 300, height: 10)
-                .animation(.linear, value: level)
+        GeometryReader { geo in
+            let height = geo.size.height
+            let width = geo.size.width
+            let step = width / CGFloat(max(volumes.count, 1)) // 0 나누기 방지
+
+            Path { path in
+                for (i, vol) in volumes.enumerated() {
+                    let x = CGFloat(i) * step
+                    let y = height / 2 - CGFloat(vol) * height / 2
+                    path.move(to: CGPoint(x: x, y: height / 2))
+                    path.addLine(to: CGPoint(x: x, y: y))
+                }
+            }
+            .stroke(Color.blue, lineWidth: 2)
         }
     }
 }

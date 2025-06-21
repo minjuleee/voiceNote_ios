@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBar: View {
     @Binding var selectedTab: Tab
     @Binding var isRecording: Bool
+    var onToggleRecording: () -> Void
 
     var body: some View {
         HStack {
@@ -31,7 +32,9 @@ struct TabBar: View {
                 if selectedTab != .record {
                     selectedTab = .record
                 } else {
-                    isRecording.toggle()
+//                    isRecording.toggle()
+                    print("onToggleRecording 호출")
+                    onToggleRecording()
                 }
             }) {
                 ZStack {
